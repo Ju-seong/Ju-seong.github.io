@@ -1,97 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juseong Park - Personal Website</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Juseong Park's Personal Website">
+    <title>Juseong Park - Research & Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff5e6;
             color: #333;
         }
         header {
-            background: linear-gradient(90deg, #bf5700, #ff6f00);
+            background-color: #bf5700;
             color: white;
             padding: 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         header img {
-            width: 200px;
+            width: 150px;
             height: auto;
             border-radius: 50%;
-            border: 5px solid white;
             margin-bottom: 10px;
         }
         nav {
+            background-color: #ff6f00;
+            padding: 10px;
             text-align: center;
-            margin: 20px 0;
         }
         nav a {
+            color: white;
             margin: 0 15px;
             text-decoration: none;
-            color: #bf5700;
             font-weight: bold;
-            transition: color 0.3s;
         }
         nav a:hover {
-            color: #ff6f00;
+            text-decoration: underline;
         }
         section {
-            margin: 20px auto;
+            margin: 20px;
             padding: 20px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        section h2 {
             color: #bf5700;
         }
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
         ul li {
-            margin: 10px 0;
-            padding: 10px;
             background: #fff8e1;
+            padding: 10px;
+            margin: 5px 0;
             border-left: 5px solid #bf5700;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
-            padding: 20px;
             background: #333;
             color: white;
+            padding: 10px;
             margin-top: 20px;
         }
-        .social-icons {
-            margin-top: 10px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: white;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
+        footer a {
             color: #ff6f00;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="Juseong_park_new.JPG" alt="Juseong Park Profile Picture">
+        <img src="Juseong_park_new.JPG" alt="Juseong Park">
         <h1>Juseong Park</h1>
         <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
     </header>
@@ -106,53 +91,43 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a Ph.D. student at The University of Texas at Austin, specializing in wireless communications, machine learning, and signal processing. My research focuses on developing innovative solutions for next-generation communication systems.</p>
+        <p>I am a Ph.D. student at The University of Texas at Austin, specializing in wireless communications, machine learning, and signal processing. My research focuses on next-generation communication systems.</p>
     </section>
 
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li><strong>The University of Texas at Austin</strong> (Aug. 2022 - Present)<br>Ph.D. in Electrical and Computer Engineering</li>
-            <li><strong>Korea University</strong> (Mar. 2019 - Aug. 2021)<br>M.E. in Electrical and Computer Engineering</li>
-            <li><strong>Korea University</strong> (Mar. 2013 - Feb. 2019)<br>B.E. in Electrical Engineering</li>
+            <li>The University of Texas at Austin - Ph.D. in Electrical and Computer Engineering (2022 - Present)</li>
+            <li>Korea University - M.E. in Electrical and Computer Engineering (2019 - 2021)</li>
+            <li>Korea University - B.E. in Electrical Engineering (2013 - 2019)</li>
         </ul>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
         <ul>
-            <li><strong>Standards Group, Nokia</strong> (Naperville, IL, Jun. 2024 - Aug. 2024)<br>Developed a deep generative model-based ray-tracing simulator.</li>
-            <li><strong>Radio Systems Research Group, Nokia Bell Labs</strong> (Murray Hill, NJ, Jun. 2023 - Aug. 2023)<br>Created deep learning-based CSI feedback reduction methods for MU-MIMO systems.</li>
-            <li><strong>WNCG and 6G@UT</strong> (Austin, TX, Aug. 2022 - Present)<br>Worked on deep learning-based solutions for MIMO systems in TDD mode.</li>
+            <li><strong>Standards Group, Nokia</strong> - Developed deep generative model-based simulators (2024)</li>
+            <li><strong>Radio Systems Research Group, Nokia Bell Labs</strong> - Created deep learning-based CSI feedback methods (2023)</li>
+            <li><strong>WNCG and 6G@UT</strong> - Research on MIMO systems in TDD mode (2022 - Present)</li>
         </ul>
     </section>
 
     <section id="publications">
         <h2>Publications</h2>
         <ul>
-            <li><strong>Generating High Dimensional User-Specific Wireless Channels using Diffusion Models</strong>, IEEE Transactions (Under Review)</li>
-            <li><strong>End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands</strong>, IEEE Transactions on Wireless Communications</li>
-            <li><strong>Deep Recurrent Q-Network Methods For Mmwave Beam Tracking Systems</strong>, IEEE Transactions on Vehicular Technology</li>
+            <li>"Generating High Dimensional User-Specific Wireless Channels using Diffusion Models" - IEEE Transactions</li>
+            <li>"End-to-End Deep Learning for TDD MIMO Systems" - IEEE Transactions</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:juseong.park@utexas.edu">juseong.park@utexas.edu</a></p>
-        <p>Address: 2501 Speedway, Austin, TX 78712</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
+        <p>Address: 2501 Speedway, Austin, TX</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Juseong Park. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+        <p>&copy; 2024 Juseong Park</p>
     </footer>
 </body>
 </html>
