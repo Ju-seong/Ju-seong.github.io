@@ -19,20 +19,27 @@
             background-color: white;
             border-bottom: 1px solid #eaeaea;
             padding: 20px;
-            text-align: center;
+        }
+        header div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+            margin: auto;
         }
         header img {
-            width: 120px;
+            width: 150px;
             height: auto;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-right: 20px;
         }
         header h1 {
-            margin: 10px 0 5px;
+            margin: 0;
             font-size: 24px;
             color: #333;
         }
         header p {
+            margin: 5px 0 0;
             font-size: 16px;
             color: #666;
         }
@@ -92,9 +99,13 @@
 </head>
 <body>
     <header>
-        <img src="Juseong_park_new.JPG" alt="Juseong Park">
-        <h1>Juseong Park</h1>
-        <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
+        <div>
+            <img src="Juseong_park_new.JPG" alt="Juseong Park">
+            <div>
+                <h1>Juseong Park</h1>
+                <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
+            </div>
+        </div>
     </header>
 
     <nav>
