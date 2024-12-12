@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juseong Park - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+    <header>
+        <h1>Juseong Park</h1>
+        <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a Ph.D. student at The University of Texas at Austin, specializing in wireless communications, machine learning, and signal processing. My research focuses on developing innovative solutions for next-generation communication systems.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>The University of Texas at Austin</strong> (Aug. 2022 - Present)<br>Ph.D. in Electrical and Computer Engineering</li>
+            <li><strong>Korea University</strong> (Mar. 2019 - Aug. 2021)<br>M.E. in Electrical and Computer Engineering</li>
+            <li><strong>Korea University</strong> (Mar. 2013 - Feb. 2019)<br>B.E. in Electrical Engineering</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Standards Group, Nokia</strong> (Naperville, IL, Jun. 2024 - Aug. 2024)<br>Developed a deep generative model-based ray-tracing simulator.</li>
+            <li><strong>Radio Systems Research Group, Nokia Bell Labs</strong> (Murray Hill, NJ, Jun. 2023 - Aug. 2023)<br>Created deep learning-based CSI feedback reduction methods for MU-MIMO systems.</li>
+            <li><strong>WNCG and 6G@UT</strong> (Austin, TX, Aug. 2022 - Present)<br>Worked on deep learning-based solutions for MIMO systems in TDD mode.</li>
+        </ul>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li><strong>Generating High Dimensional User-Specific Wireless Channels using Diffusion Models</strong>, IEEE Transactions (Under Review)</li>
+            <li><strong>End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands</strong>, IEEE Transactions on Wireless Communications</li>
+            <li><strong>Deep Recurrent Q-Network Methods For Mmwave Beam Tracking Systems</strong>, IEEE Transactions on Vehicular Technology</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:juseong.park@utexas.edu">juseong.park@utexas.edu</a></p>
+        <p>Address: 2501 Speedway, Austin, TX 78712</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Juseong Park. All rights reserved.</p>
+    </footer>
 </body>
 </html>
