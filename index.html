@@ -57,15 +57,21 @@
             padding-bottom: 5px;
             margin-bottom: 20px;
         }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
         ul {
-            list-style: none;
-            padding: 0;
+            list-style: disc;
+            padding-left: 20px;
         }
         ul li {
             margin: 10px 0;
-            padding: 10px;
-            background: #f8f8f8;
-            border-left: 4px solid #eaeaea;
         }
         footer {
             text-align: center;
@@ -88,32 +94,28 @@
             <h1>Juseong Park</h1>
             <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
             <p>Juseong Park received the B.E. and M.E. degrees in electrical engineering from Korea University, Seoul, South Korea. He is currently pursuing the Ph.D. degree in electrical and computer engineering with the University of Texas at Austin, Austin, TX, USA. He is currently a Graduate Research Assistant with the Wireless Networking and Communication Group (WNCG) and the 6G@UT Research Center, UT Austin. He has previously held internships at Nokia Bell Labs, Murray Hill, NJ, USA; and Nokia Standards, Naperville, IL, USA. His research interests lie mainly in the intersection of machine learning and wireless networks.</p>
-            <h3>Interests</h3>
-            <ul>
-                <li>Wireless Communications</li>
-                <li>Machine Learning</li>
-                <li>Signal Processing</li>
-            </ul>
-            <h3>Education</h3>
-            <ul>
-                <li>The University of Texas at Austin - Ph.D. in Electrical and Computer Engineering (2022 - Present)</li>
-                <li>Korea University - M.E. in Electrical and Computer Engineering (2019 - 2021)</li>
-                <li>Korea University - B.E. in Electrical Engineering (2013 - 2019)</li>
-            </ul>
         </div>
     </header>
 
-    <section id="featured-research">
-        <h2>Featured Research</h2>
-        <p>I am working on cutting-edge technologies in wireless communications and machine learning, specializing in developing novel models to address next-generation communication challenges.</p>
-    </section>
-
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>"Generating High Dimensional User-Specific Wireless Channels using Diffusion Models"</strong> - IEEE Transactions</li>
-            <li><strong>"End-to-End Deep Learning for TDD MIMO Systems"</strong> - IEEE Transactions</li>
-        </ul>
+    <section id="details">
+        <div class="row">
+            <div class="column">
+                <h3>Interests</h3>
+                <ul>
+                    <li>Wireless Communications</li>
+                    <li>Machine Learning</li>
+                    <li>Signal Processing</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Education</h3>
+                <ul>
+                    <li>The University of Texas at Austin - Ph.D. in Electrical and Computer Engineering (2022 - Present)</li>
+                    <li>Korea University - M.E. in Electrical and Computer Engineering (2019 - 2021)</li>
+                    <li>Korea University - B.E. in Electrical Engineering (2013 - 2019)</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <footer>
