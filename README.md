@@ -1,2 +1,2 @@
-# juseongpark.github.io
-juseongpark.github.io
+# Juseong's Website
+Welcome!
