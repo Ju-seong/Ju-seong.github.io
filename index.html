@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juseong Park - Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #4CAF50, #2E8B57);
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 10px;
         }
         nav {
             text-align: center;
@@ -26,30 +38,60 @@
             margin: 0 15px;
             text-decoration: none;
             color: #4CAF50;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #2E8B57;
         }
         section {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
         }
         h1, h2 {
             color: #4CAF50;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             background: #333;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #4CAF50;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="Juseong_park_new.JPG" alt="Juseong Park Profile Picture">
         <h1>Juseong Park</h1>
         <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
     </header>
@@ -89,19 +131,4 @@
         <h2>Publications</h2>
         <ul>
             <li><strong>Generating High Dimensional User-Specific Wireless Channels using Diffusion Models</strong>, IEEE Transactions (Under Review)</li>
-            <li><strong>End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands</strong>, IEEE Transactions on Wireless Communications</li>
-            <li><strong>Deep Recurrent Q-Network Methods For Mmwave Beam Tracking Systems</strong>, IEEE Transactions on Vehicular Technology</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:juseong.park@utexas.edu">juseong.park@utexas.edu</a></p>
-        <p>Address: 2501 Speedway, Austin, TX 78712</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Juseong Park. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <li><strong>End-to-End Deep Learning for TDD MIMO Systems in
