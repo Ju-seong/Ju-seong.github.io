@@ -3,153 +3,300 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Juseong Park's Personal Website">
-    <title>Juseong Park - Research & Experience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <meta name="description" content="Juseong Park - Ph.D. Student & Researcher in Wireless Communications">
+    <meta name="author" content="Juseong Park">
+    <title>Juseong Park | Researcher</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary-color: #bf5700; /* UT Austin Burnt Orangeish tone for accent, or use #0056b3 for generic blue */
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border-color: #eaeaea;
+            --font-heading: 'Inter', sans-serif;
+            --font-body: 'Lora', serif; /* Serif for body text looks more academic */
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Montserrat', Arial, sans-serif;
+            font-family: var(--font-body);
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.9;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            font-size: 17px;
         }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            background-color: white;
-            border-bottom: 1px solid #eaeaea;
+
+        /* Typography */
+        h1, h2, h3, h4, nav a {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #111;
         }
-        header img {
-            width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin-right: 40px;
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
         }
-        header div {
-            max-width: 600px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #333;
-        }
-        header p {
-            margin: 10px 0 0;
-            font-size: 18px;
-            color: #666;
-        }
-        header p.bio {
-            font-size: 18px;
-            color: #222;
-            font-weight: 500;
-        }
-        section {
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        a:hover { text-decoration: underline; }
+
+        /* Layout Container */
+        .container {
             max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        section h2 {
-            color: #333;
-            font-size: 24px;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
-        .row {
+        nav .container {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            align-items: center;
         }
-        .column {
-            flex: 1;
-            padding: 10px;
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
         }
-        ul {
-            list-style: disc;
-            padding-left: 20px;
+        .nav-links a {
+            margin-left: 20px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 600;
         }
-        ul li {
-            margin: 10px 0;
+        .nav-links a:hover { color: var(--primary-color); text-decoration: none; }
+
+        /* Profile Header */
+        .profile-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 60px;
         }
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px; /* Rounded square looks more professional than circle sometimes */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .profile-info h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+        .profile-role {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        .social-links a:hover { color: var(--primary-color); }
+
+        /* Sections */
+        section { margin-bottom: 60px; }
+        
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Grid for Interests & Education */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .info-box h3 { font-size: 1.1rem; margin-bottom: 15px; }
+        .info-box ul { padding-left: 20px; margin: 0; }
+        .info-box li { margin-bottom: 8px; font-size: 0.95rem; }
+
+        /* Publications List style */
+        .pub-list { list-style: none; padding: 0; }
+        .pub-item {
+            margin-bottom: 20px;
+            padding-left: 0;
+            display: block;
+        }
+        .pub-title {
+            font-weight: 600;
+            font-family: var(--font-heading);
+            color: #000;
+        }
+        .pub-authors { color: var(--text-color); }
+        .pub-venue { font-style: italic; color: var(--text-light); }
+        .me { font-weight: 700; text-decoration: underline; color: #000; }
+        
+        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            background: white;
-            border-top: 1px solid #eaeaea;
-            color: #666;
-            margin-top: 40px;
+            padding: 40px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            font-family: var(--font-heading);
         }
-        footer a {
-            color: #666;
-            text-decoration: none;
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-section { flex-direction: column; align-items: center; text-align: center; }
+            .profile-img { width: 180px; height: 180px; }
+            .info-grid { grid-template-columns: 1fr; gap: 20px; }
+            .nav-links { display: none; /* Ideally add a hamburger menu for mobile, simplified for now */ }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="Juseong_park_new.JPG" alt="Juseong Park">
-        <div>
-            <h1>Juseong Park</h1>
-            <p>Ph.D. Student | Wireless Communications | Machine Learning</p>
-            <p class="bio">
-                I am a Ph.D. student in Electrical and Computer Engineering at The University of Texas at Austin, advised by Prof. Jeffrey Andrews. Currently, I am a Graduate Research Assistant with the Wireless Networking and Communication Group (WNCG) and the 6G@UT Research Center. My research primarily focuses on the intersection of machine learning and wireless communications.
-            </p>
-            <p class="bio">
-                I received my B.E. and M.E. degrees in electrical engineering from Korea University, where I was advised by Prof. Inkyu Lee during my master’s studies. I have previously held internships at Nokia Bell Labs in Murray Hill, NJ; Nokia Standards in Naperville, IL; and Qualcomm in San Diego, CA.
-            </p>
-        </div>
-    </header>
 
-    <section id="details">
-        <div class="row">
-            <div class="column">
-                <h3>Interests</h3>
-                <ul>
-                    <li>Wireless Communications</li>
-                    <li>Machine Learning</li>
-                    <li>Signal Processing</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Education</h3>
-                <ul>
-                    <li>The University of Texas at Austin - Ph.D. in Electrical and Computer Engineering (2022 - Present)</li>
-                    <li>Korea University - M.E. in Electrical and Computer Engineering (2019 - 2021)</li>
-                    <li>Korea University - B.E. in Electrical Engineering (2013 - 2019)</li>
-                </ul>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">Juseong Park</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#experience">Experience</a>
+                <a href="#">CV</a> 
             </div>
         </div>
-    </section>
+    </nav>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <h3>Journal Publications</h3>
-        <ul>
-            <li><u>J. Park</u>, F. Sohrabi, J. Du, and J. G. Andrews, "Self-Nomination: Deep Learning for Decentralized CSI Feedback Reduction in MU-MIMO Systems," April 2025. [Online]. Available: <a href="https://arxiv.org/abs/2504.16351">arXiv:2504.16351</a> (Under review).</li>
-            <li>T. Lee, <u>J. Park</u>, H. Kim, and J. G. Andrews, "Generating High Dimensional User-Specific Wireless Channels using Diffusion Models," in <em>IEEE Transactions on Wireless Communications</em>, to appear.</li>
-            <li><u>J. Park</u>, F. Sohrabi, A. Ghosh, and J. G. Andrews, "End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands," in <em>IEEE Transactions on Wireless Communications</em>, vol.24, no.3, pp.2110-2125, March 2025.</li>
-            <li><u>J. Park</u>, H. Lee, S. Hwang, and I. Lee, "Deep Recurrent Q-Network Methods For Mmwave Beam Tracking Systems," in <em>IEEE Transactions on Vehicular Technology</em>, vol.71, no.12, pp.13429-13434, December 2022.</li>
-            <li>S. Hwang, H. Lee, <u>J. Park</u>, and I. Lee, "Decentralized Computation Offloading With Cooperative UAVs: A Multi-Agent Deep Reinforcement Learning Perspective," in <em>IEEE Wireless Communications</em>, vol.29, no.4, pp.24-31, August 2022.</li>
-            <li><u>J. Park</u>, S. Baek, J. Moon, and I. Lee, "Grid-Based Bayesian Beam Tracking With Multiple Observations for Millimeter Wave Channels," in <em>IEEE Transactions on Vehicular Technology</em>, vol.70, no.12, pp.13413-13417, December 2021.</li>
-        </ul>
-        <h3>Conference</h3>
-        <ul>
-            <li><u>J. Park</u>, F. Sohrabi, J. Du, and J. G. Andrews, "Self-Nomination Based Feedback Reduction for MU-MIMO," in Proceedings of the 58<sup>th</sup> <em>Asilomar Conference on Signals, Systems, and Computers</em>, pp.776–780, November 2024.</li>
-            <li>T. Lee, <u>J. Park</u>, H. Kim, and J. G. Andrews, "High Dimensional User-Specific Channel Generation for CSI Compression Using Diffusion Models," in Proceedings of the 58<sup>th</sup> <em>Asilomar Conference on Signals, Systems, and Computers</em>, pp.759-763, November 2024.</li>
-            <li>S. Hwang, <u>J. Park</u>, H. Lee, M. Kim and I. Lee, "Deep Reinforcement Learning Approach for UAV-Assisted Mobile Edge Computing Networks," in Proceedings of </em>IEEE Global Communications Conference</em>, pp.3839-3844, December 2022.</li>
-        </ul>
-    </section>
+    <div class="container">
+        
+        <section id="about" class="profile-section">
+            <img src="Juseong_park_new.JPG" alt="Juseong Park" class="profile-img">
+            
+            <div class="profile-info">
+                <h1>Juseong Park</h1>
+                <div class="profile-role">Ph.D. Candidate @ UT Austin | Wireless Communications & ML Researcher</div>
+                
+                <p>
+                    I am a Ph.D. student in Electrical and Computer Engineering at <strong>The University of Texas at Austin</strong>, advised by <a href="https://www.prof-jeffrey-andrews.com/" target="_blank">Prof. Jeffrey Andrews</a>. As a Graduate Research Assistant with the <strong>Wireless Networking and Communication Group (WNCG)</strong> and the <strong>6G@UT Research Center</strong>, my research focuses on the intersection of machine learning (Diffusion Models, Deep Learning) and wireless communications (MIMO, CSI Feedback).
+                </p>
+                <p>
+                    Previously, I received my B.E. and M.E. degrees from Korea University, advised by Prof. Inkyu Lee. I have gained industrial research experience through internships at <strong>Nokia Bell Labs</strong>, <strong>Nokia Standards</strong>, and <strong>Qualcomm</strong>.
+                </p>
+
+                <div class="social-links">
+                    <a href="mailto:juseong.park.email@utexas.edu" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://scholar.google.com" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3><i class="fas fa-lightbulb"></i> Research Interests</h3>
+                    <ul>
+                        <li><strong>Wireless Communications:</strong> MU-MIMO, CSI Feedback, Beam Tracking</li>
+                        <li><strong>Machine Learning:</strong> Generative Models (Diffusion), Deep Reinforcement Learning</li>
+                        <li><strong>Signal Processing:</strong> Compressive Sensing, Optimization</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3><i class="fas fa-university"></i> Education</h3>
+                    <ul>
+                        <li>
+                            <strong>The University of Texas at Austin</strong><br>
+                            <span style="color:#666; font-size:0.9em">Ph.D. in ECE (2022 - Present)</span>
+                        </li>
+                        <li>
+                            <strong>Korea University</strong><br>
+                            <span style="color:#666; font-size:0.9em">M.E. in ECE (2019 - 2021)</span>
+                        </li>
+                        <li>
+                            <strong>Korea University</strong><br>
+                            <span style="color:#666; font-size:0.9em">B.E. in Electrical Engineering (2013 - 2019)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2 class="section-title">Selected Publications</h2>
+            
+            <h3>Journal Articles</h3>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <span class="pub-title">Self-Nomination: Deep Learning for Decentralized CSI Feedback Reduction in MU-MIMO Systems</span><br>
+                    <span class="pub-authors"><span class="me">J. Park</span>, F. Sohrabi, J. Du, and J. G. Andrews</span><br>
+                    <span class="pub-venue">arXiv preprint, April 2025 (Under Review).</span> 
+                    [<a href="https://arxiv.org/abs/2504.16351">PDF</a>]
+                </li>
+                <li class="pub-item">
+                    <span class="pub-title">Generating High Dimensional User-Specific Wireless Channels using Diffusion Models</span><br>
+                    <span class="pub-authors">T. Lee, <span class="me">J. Park</span>, H. Kim, and J. G. Andrews</span><br>
+                    <span class="pub-venue">IEEE Transactions on Wireless Communications (To Appear).</span>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-title">End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands</span><br>
+                    <span class="pub-authors"><span class="me">J. Park</span>, F. Sohrabi, A. Ghosh, and J. G. Andrews</span><br>
+                    <span class="pub-venue">IEEE Transactions on Wireless Communications, vol.24, no.3, March 2025.</span>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-title">Deep Recurrent Q-Network Methods For Mmwave Beam Tracking Systems</span><br>
+                    <span class="pub-authors"><span class="me">J. Park</span>, H. Lee, S. Hwang, and I. Lee</span><br>
+                    <span class="pub-venue">IEEE Transactions on Vehicular Technology, Dec 2022.</span>
+                </li>
+            </ul>
+
+            <h3>Conference Proceedings</h3>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <span class="pub-title">Self-Nomination Based Feedback Reduction for MU-MIMO</span><br>
+                    <span class="pub-authors"><span class="me">J. Park</span>, F. Sohrabi, J. Du, and J. G. Andrews</span><br>
+                    <span class="pub-venue">Asilomar Conference on Signals, Systems, and Computers, Nov 2024.</span>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-title">High Dimensional User-Specific Channel Generation for CSI Compression Using Diffusion Models</span><br>
+                    <span class="pub-authors">T. Lee, <span class="me">J. Park</span>, H. Kim, and J. G. Andrews</span><br>
+                    <span class="pub-venue">Asilomar Conference on Signals, Systems, and Computers, Nov 2024.</span>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-title">Deep Reinforcement Learning Approach for UAV-Assisted Mobile Edge Computing Networks</span><br>
+                    <span class="pub-authors">S. Hwang, <span class="me">J. Park</span>, H. Lee, M. Kim and I. Lee</span><br>
+                    <span class="pub-venue">IEEE Global Communications Conference (Globecom), Dec 2022.</span>
+                </li>
+            </ul>
+        </section>
+
+    </div>
 
     <footer>
-        <p>&copy; 2024 Juseong Park</p>
+        &copy; 2025 Juseong Park. Last updated: November 2025.
     </footer>
+
 </body>
 </html>
