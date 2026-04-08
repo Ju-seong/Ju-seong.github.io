@@ -19,7 +19,7 @@ permalink: /blog/
             <article class="blog-card">
                 <p class="blog-card-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
                 <h2 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</p>
+                <p class="blog-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 220 }}</p>
                 <p class="blog-card-cta"><a href="{{ post.url | relative_url }}">Read post</a></p>
             </article>
         </li>

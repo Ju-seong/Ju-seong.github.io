@@ -131,7 +131,7 @@ description: Juseong Park - Ph.D. Candidate and researcher in wireless communica
             <article class="recent-post-card">
                 <p class="blog-card-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
                 <h3 class="recent-post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p class="recent-post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                <p class="recent-post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
             </article>
             {% endfor %}
         </div>
