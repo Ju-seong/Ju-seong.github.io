@@ -135,6 +135,10 @@ The main message of this work is that, in MU-MIMO, CSI feedback should be select
 
 By letting each UE decide whether its CSI is worth feeding back, self-nomination reduces redundant uplink transmissions, simplifies BS-side scheduling, and can improve downlink performance by filtering out spatially incompatible users in advance. It also makes simple random scheduling surprisingly effective. At the UE side, users that do not feed back can remain silent, creating the potential for meaningful power savings.
 
+## Code
+
+For implementation details and code, please see the [project repository](https://github.com/Ju-seong/Self-Nomination-Decentralized-CSI-Feedback-Reduction-in-MU-MIMO-Systems).
+
 ## Paper
 
 This post is based on the following paper: [J. Park, F. Sohrabi, J. Du, and J. G. Andrews, "Self-Nomination: Deep Learning for Decentralized CSI Feedback Reduction in MU-MIMO Systems," in *IEEE Transactions on Wireless Communications*, vol. 25, pp. 10321-10336, 2026](https://ieeexplore.ieee.org/abstract/document/11351314).
