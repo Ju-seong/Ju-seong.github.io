@@ -1,0 +1,14 @@
+{% assign home_url = '/' | relative_url %}
+{% assign blog_url = '/blog/' | relative_url %}
+<nav>
+    <div class="container nav-container">
+        <a href="{{ home_url }}" class="nav-logo">Juseong Park</a>
+        <div class="nav-links">
+            <a href="{{ home_url }}#about">About</a>
+            <a href="{{ home_url }}#publications">Publications</a>
+            <a href="{{ home_url }}#experience">Experience</a>
+            <a href="{{ blog_url }}">Blog</a>
+            <a href="{{ '/JuseongPark_CV_260408.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+    </div>
+</nav>
