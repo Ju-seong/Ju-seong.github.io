@@ -6,7 +6,11 @@ math: true
 description: "A short overview of our TWC 2025 paper, End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands."
 ---
 
+## Paper
+
 This post is based on the following paper: [J. Park, F. Sohrabi, A. Ghosh and J. G. Andrews, "End-to-End Deep Learning for TDD MIMO Systems in the 6G Upper Midbands," in *IEEE Transactions on Wireless Communications*, vol. 24, no. 3, pp. 2110-2125, March 2025](https://ieeexplore.ieee.org/abstract/document/10810300).
+
+## Introduction
 
 In conventional TDD MIMO systems, the BS first estimates or reconstructs the channel and then computes the downlink precoder. This pipeline is natural, but it may not be the most efficient one. If the final goal is downlink precoding, a more direct question is whether we can learn only the information that actually matters for transmission, rather than reconstructing the full channel first.
 
