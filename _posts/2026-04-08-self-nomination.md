@@ -91,9 +91,7 @@ During training, the stochastic policy explores different feedback decisions. In
 
 ## Main result
 
-The main takeaway is that self-nomination can significantly reduce feedback overhead with little or no performance loss.
-
-In the UPA setting, the proposed method outperforms conventional full-feedback baselines because it filters out spatially incompatible users before BS-side scheduling. This is especially important when spatial correlation is strong and simply collecting more CSI does not necessarily help ZF precoding.
+In the UPA setting, self-nomination achieves strong MU-MIMO sum-rate while using far fewer feedback users. The key reason is that the channel is spatially dense, so reducing the candidate user set before BS-side scheduling can actually help by filtering out spatially incompatible users.
 
 <div style="text-align: center;">
   <img src="{{ '/assets/img/posts/self-nomination/fig3.png' | relative_url }}" alt="Sum-rate versus number of UEs in the UPA setting" style="width: 4in; max-width: 100%; height: auto;">
@@ -101,19 +99,13 @@ In the UPA setting, the proposed method outperforms conventional full-feedback b
 
 *Self-nomination achieves strong MU-MIMO sum-rate performance as the number of UEs grows.*
 
-## Feedback reduction
-
-The gain is not only in sum-rate. The proposed method also sharply reduces how many UEs actually send CSI.
-
-In this setting, the number of self-nominated users stays relatively small even as the total number of UEs increases. This reflects the fact that, under strong spatial congestion, only a limited subset of users are spatially suitable for effective MU-MIMO transmission.
+At larger user counts, this comes with roughly an 84% reduction in feedback users compared with full feedback, for example about 11 self-nominated users instead of 70 when the total number of UEs is 70. Even a simple RS-based pipeline remains very competitive once the feedback set is pruned in this way.
 
 <div style="text-align: center;">
   <img src="{{ '/assets/img/posts/self-nomination/fig4.png' | relative_url }}" alt="Average number of self-nominated users in the UPA setting" style="width: 4in; max-width: 100%; height: auto;">
 </div>
 
 *Self-nomination keeps the number of feedback users low while maintaining strong sum-rate performance.*
-
-This is useful not only for uplink resource savings, but also for UE energy savings, since non-nominating users can remain silent.
 
 ## Beyond simple thresholding
 
