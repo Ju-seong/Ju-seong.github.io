@@ -108,7 +108,7 @@ main {
 .profile-section {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 60px;
 }
 
@@ -202,29 +202,9 @@ section {
     font-size: 0.9em;
 }
 
-.experience-list,
 .pub-list {
     list-style: none;
     padding: 0;
-}
-
-.experience-item {
-    margin-bottom: 24px;
-}
-
-.experience-item h3 {
-    margin: 0 0 4px;
-    font-size: 1.05rem;
-}
-
-.experience-role,
-.experience-details {
-    margin: 0;
-}
-
-.experience-details {
-    color: var(--text-light);
-    font-size: 0.95rem;
 }
 
 .pub-item {
