@@ -108,13 +108,14 @@ main {
 .profile-section {
     display: flex;
     gap: 40px;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 60px;
 }
 
 .profile-img {
     width: 220px;
     height: 220px;
+    margin-top: 20px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -433,6 +434,7 @@ footer {
     .profile-img {
         width: 180px;
         height: 180px;
+        margin-top: 0;
     }
 
     .info-grid {
